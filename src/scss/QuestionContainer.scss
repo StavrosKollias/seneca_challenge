@@ -1,0 +1,27 @@
+.question-container{
+    max-width: 80rem;
+    max-height: 40rem;
+    min-height: 40rem;
+    margin: auto;
+    @include warning();
+    @include flex-column-centered(); 
+    justify-content: space-evenly;
+
+
+    .warning{
+        @include warning;
+    }
+
+    .pass{
+        @include pass;
+    }
+}
+
+.buttons-container{
+    width: 100%;
+    line-height: 140%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}

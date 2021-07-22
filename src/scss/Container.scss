@@ -1,0 +1,11 @@
+@import "./variables";
+@import "./mixins";
+@import "./QuestionContainer.scss";
+@import "./ButtonSlide.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: $white;
+  font-family: Mulish;
+}
