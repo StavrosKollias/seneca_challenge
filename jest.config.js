@@ -8,6 +8,7 @@ module.exports = {
       'src/**/*.ts',
       'src/**/*.tsx',
     ],
+    testEnvironment: 'jsdom',
     testPathIgnorePatterns: [
       '<rootDir>/build/',
       '<rootDir>/node_modules/',
