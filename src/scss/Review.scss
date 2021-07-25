@@ -1,0 +1,11 @@
+.review-component {
+    max-width: 80rem;
+    min-height: 40rem;
+    margin: auto;
+    transform: scale(0.3);
+    transition-delay: 2s;
+    transition: transform 2s ease-in-out;
+    img {
+        width: 100%;
+    }
+}

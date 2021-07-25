@@ -10,6 +10,6 @@ export const findByTestAttr = (
   wrapper: ShallowWrapper | ReactWrapper,
   val: string
 ) => {
-  const component = wrapper.find(`[data-test='${val}']`);
+  const component = wrapper.find(`[data-testid='${val}']`);
   return component;
 };

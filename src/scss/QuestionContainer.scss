@@ -1,23 +1,26 @@
-.question-container{
+.question-container {
     max-width: 80rem;
-    max-height: 40rem;
     min-height: 40rem;
     margin: auto;
-    @include warning();
-    @include flex-column-centered(); 
+    transition-delay: 2s;
+    transition: margin 2s;
+    @include flex-column-centered();
     justify-content: space-evenly;
 
-
-    .warning{
+    &.warning {
         @include warning;
     }
 
-    .pass{
+    &.pass {
         @include pass;
+    }
+
+    &.fail {
+        @include fail;
     }
 }
 
-.buttons-container{
+.buttons-container {
     width: 100%;
     line-height: 140%;
     display: flex;

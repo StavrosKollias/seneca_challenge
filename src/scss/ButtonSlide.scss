@@ -7,7 +7,7 @@
   flex-direction: row;
   align-items: stretch;
   overflow: hidden;
-  border-color: $light-caution;
+  border-color: $light-warning;
   cursor: pointer;
   position: relative;
 
@@ -41,11 +41,11 @@
     }
   }
 
-  &.warning {
-    border-color: $light-caution;
-  }
+  // &.warning {
+  //   border-color: $light-warning;
+  // }
 
-  &.pass {
-    border-color: $light-pass;
-  }
+  // &.pass {
+  //   border-color: $light-pass;
+  // }
 }

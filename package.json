@@ -1,71 +1,72 @@
 {
-  "name": "seneca_challenge",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@lerna/bootstrap": "^4.0.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/enzyme": "^3.10.9",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.14",
-    "@types/react-dom": "^17.0.0",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "enzyme-adapter-react-16.1": "^1.6.4",
-    "husky": "^7.0.1",
-    "jest-cli": "^27.0.6",
-    "jest-transform-stub": "^2.0.0",
-    "jsdom": "^16.6.0",
-    "jsdom-global": "^3.0.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "sass": "^1.35.2",
-    "ts-jest": "^27.0.4",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test-watch": "jest --coverage --verbose  --watch",
-    "test": "jest --coverage --verbose",
-    "test-lerna": "lerna run test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@types/enzyme-adapter-react-16": "^1.0.6"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "CI=true lerna run test"
+    "name": "seneca_challenge",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@lerna/bootstrap": "^4.0.0",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "@types/enzyme": "^3.10.9",
+        "@types/jest": "^26.0.15",
+        "@types/node": "^12.0.0",
+        "@types/react": "^17.0.14",
+        "@types/react-dom": "^17.0.0",
+        "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.6",
+        "enzyme-adapter-react-16.1": "^1.6.4",
+        "husky": "^7.0.1",
+        "jest-cli": "^27.0.6",
+        "jest-transform-stub": "^2.0.0",
+        "jsdom": "^16.6.0",
+        "jsdom-global": "^3.0.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-scripts": "4.0.3",
+        "sass": "^1.35.2",
+        "ts-jest": "^27.0.4",
+        "typescript": "^4.1.2",
+        "web-vitals": "^1.0.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test-watch": "jest --coverage --verbose  --watch",
+        "test": "jest --coverage --verbose",
+        "commit-test": "jest --runInBand",
+        "test-lerna": "lerna run test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@types/enzyme-adapter-react-16": "^1.0.6"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "CI=true yarn test"
+        }
+    },
+    "workspaces": {
+        "packages": [
+            "./"
+        ]
     }
-  },
-   "workspaces": {
-    "packages": [
-      "./"
-    ]
-  }
 }

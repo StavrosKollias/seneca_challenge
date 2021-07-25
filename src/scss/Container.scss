@@ -1,11 +1,40 @@
 @import "./variables";
+@import "./global";
 @import "./mixins";
 @import "./QuestionContainer.scss";
 @import "./ButtonSlide.scss";
+@import "./Review.scss";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  color: $white;
-  font-family: Mulish;
+.container {
+    width: 100%;
+    &.animate {
+        .pass {
+            animation: slideUp 5s forwards;
+        }
+
+        .review-component {
+            transform: scale(1);
+            animation: scaleUp 5s forwards;
+        }
+    }
+}
+
+@keyframes slideUp {
+    from {
+        margin-top: 0%;
+    }
+
+    to {
+        margin-top: -40rem;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.3);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
