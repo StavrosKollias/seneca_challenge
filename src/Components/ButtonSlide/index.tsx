@@ -27,29 +27,31 @@ const ButtonSlide: React.FC<IButtonSlideProps> = ({ responsive, answers, handleC
     };
 
     const resizeWindow = React.useCallback(
-        (width: number, height: number) => {
-            setNewValueInState({ width: width, containerHeight: height });
+        (width: number) => {
+            setNewValueInState({ width: width, containerHeight: ref.current?.offsetHeight });
         },
         [state.containerHeight]
     );
 
     React.useEffect(() => {
         handleChangeSelect(answers[state.answer]);
-        const height = ref.current ? ref.current.offsetHeight : 0;
         if (responsive || answers.length > 3) {
-            resizeWindow(window.innerWidth, height);
+            resizeWindow(window.innerWidth);
 
             window.addEventListener("resize", () => {
-                resizeWindow(window.innerWidth, height);
+                resizeWindow(window.innerWidth);
             });
         }
 
         return () => {
-            window.removeEventListener("resize", () => resizeWindow(window.innerWidth, height));
+            window.removeEventListener("resize", () => resizeWindow(window.innerWidth));
         };
     }, []);
 
-    const height = { height: `${state.containerHeight / answers.length}px`, marginTop: `${state.answer * (state.containerHeight / answers.length)}px` };
+    const height = {
+        height: `${(state.containerHeight + answers.length) / answers.length}px`,
+        marginTop: `${state.answer * ((state.containerHeight + answers.length) / answers.length)}px`,
+    };
     const width = { width: `${100 / answers.length}%`, marginLeft: `${(state.answer * 100) / answers.length}%` };
 
     return (

@@ -1,6 +1,5 @@
 import React from "react";
-
-import "../../scss/Container.scss";
+import "./Container.scss";
 import QuestionContainer from "../QuestionContainer";
 import Review from "../Review/Review";
 
@@ -16,7 +15,7 @@ const Container: React.FC = () => {
                 multipleChoice={[
                     { answer1: ["Cell wall", "Ribosomes"] },
                     { answer2: ["Cytoplasm", "Chloroplast"] },
-                    { answer3: ["Partially permeable membrane", "Impermeable  membrane"] },
+                    { answer3: ["Partially permeable membrane", "Impermeable  membrane", "test", "test"] },
                     { answer4: ["Cellulose", "Mitochondria"] },
                 ]}
                 correct={["Ribosomes", "Cytoplasm", "Partially permeable membrane", "Mitochondria"]}

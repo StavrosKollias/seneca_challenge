@@ -1,9 +1,8 @@
-@import "./variables";
-@import "./global";
-@import "./mixins";
-@import "./QuestionContainer.scss";
-@import "./ButtonSlide.scss";
-@import "./Review.scss";
+@import "../../scss/variables";
+@import "../../scss/global";
+@import "../ButtonSlide/ButtonSlide.scss";
+@import "../QuestionContainer/QuestionContainer.scss";
+@import "../Review/Review.scss";
 
 .container {
     width: 100%;
